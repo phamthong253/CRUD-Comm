@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <div className="mb-6 flex justify-between md:mb-0">
-              <p className="mb-4">
+              <div className="mb-4">
                 <h2 className="mb-2 font-medium uppercase">Follow us:</h2>
                 <ul className="flex mx-auto">
                   <li className="p-4">
@@ -65,7 +65,7 @@ export default function Footer() {
                     Click here:
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* <!--Copyright section--> */}
         <div className="bg-neutral-200 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
-          © 2023 Copyright
+          © 2023 Inspire from artcorgi.com
         </div>
       </footer>
     </>

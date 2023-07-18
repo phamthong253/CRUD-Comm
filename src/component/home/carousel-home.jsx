@@ -43,13 +43,13 @@ function CarouselHome() {
               alt="Wild Landscape"
             />
             <div className=" flex grow-0 shrink-0 basis-auto mx-auto w-full md:min-h-0 md:w-[45rem] md:ml-0 lg:px-8 lg:py-8 md:pr-12 rounded-2xl">
-              <p className="bg-purple-400 p-6 md:max-h-44 lg:rounded-lg">
-                <h2 className="text-3xl text-center">Lilia</h2>
+              <div className="bg-purple-400 p-6 md:max-h-44 lg:rounded-lg">
+                <p className="text-3xl text-center">Lilia</p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Eveniet aut atque quae voluptas corporis consectetur maxime ipsa
                 numquam, nesciunt reprehenderit facere harum a deleniti odio
                 rerum delectus dolore, iste laborum. Maxime officiis recusandae
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -65,13 +65,13 @@ function CarouselHome() {
               alt="Wild Landscape"
             />
             <div className=" flex grow-0 shrink-0 basis-auto md:min-h-full mx-auto w-full md:w-[45rem] lg:ml-3 lg:px-8 lg:py-12 md:pr-12 rounded-2xl">
-              <p className="bg-purple-400 p-6 md:max-h-44  lg:rounded-lg">
-                <h2 className="text-3xl text-center">Lilia</h2>
+              <div className="bg-purple-400 p-6 md:max-h-44  lg:rounded-lg">
+                <p className="text-3xl text-center">Lilia</p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Eveniet aut atque quae voluptas corporis consectetur maxime ipsa
                 numquam, nesciunt reprehenderit facere harum a deleniti odio
                 rerum delectus dolore, iste laborum. Maxime officiis recusandae
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,13 +87,13 @@ function CarouselHome() {
               alt="Wild Landscape"
             />
             <div className=" flex grow-0 shrink-0 basis-auto md:min-h-full mx-auto w-full md:w-[45rem] lg:ml-3 lg:px-8 lg:py-12 md:pr-12 rounded-2xl">
-              <p className="bg-purple-400 p-6 md:max-h-44  lg:rounded-lg">
-                <h2 className="text-3xl text-center">Lilia</h2>
+              <div className="bg-purple-400 p-6 md:max-h-44  lg:rounded-lg">
+                <p className="text-3xl text-center">Lilia</p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Eveniet aut atque quae voluptas corporis consectetur maxime ipsa
                 numquam, nesciunt reprehenderit facere harum a deleniti odio
                 rerum delectus dolore, iste laborum. Maxime officiis recusandae
-              </p>
+              </div>
             </div>
           </div>
         </div>

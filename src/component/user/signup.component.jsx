@@ -7,12 +7,12 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import SuccessModal from "../dialog/successModal.component";
 import FailModal from "../dialog/failModal.component";
-
-
+import useAuth from "../hooks/useAuth.component";
 
 export default function Signup() {
   const [showModal, setShowModal] = useState(false);
   const [showFailModal, setShowFailModal] = useState(false);
+  const {loading, setLoading} = useAuth();
 
   
   const navigate = useNavigate();
@@ -39,11 +39,13 @@ export default function Signup() {
       email: Yup.string()
         .required("Vui lòng điền thông tin")
         .matches(
+          // eslint-disable-next-line no-useless-escape
           /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
           "Vui lòng nhập đúng địa chỉ Email"
         ),
     }),
     onSubmit: async (values,  { setSubmitting }) => {
+      setLoading(true)
       console.log(values);
     const payload = {
       username: values.username,
@@ -61,6 +63,7 @@ export default function Signup() {
       setTimeout(() => setShowFailModal(false), 3000)
       console.error(error.response.data.message);
     } finally {
+      setLoading(false)
       setSubmitting(false);
     }
     },
@@ -70,7 +73,11 @@ export default function Signup() {
   return (
     <section className="dark:bg-gray-900 bg-[url('/image/2103488.jpg')] shadow-lg">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        {loading ? ( <div
+            className="flex justify-center items-center h-10 w-10 animate-spin text-white rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            role="status"
+          >
+          </div> ) : <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Create and account
@@ -150,13 +157,13 @@ export default function Signup() {
               </div>
               <div>
                 <label
-                  htmlFor="confirm-password"
+                  htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Confirm password
                 </label>
                 <input
-                  type="confirmPassword"
+                  type="password"
                   name="confirmPassword"
                   id="confirmPassword"
                   placeholder="••••••••"
@@ -224,7 +231,7 @@ export default function Signup() {
             </p>
             </form>
           </div>
-        </div>
+        </div>}
       </div>
       <div>
           {showModal ? (
